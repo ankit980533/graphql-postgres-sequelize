@@ -41,6 +41,8 @@ const getUserByEmail = async (email) => {
 const getUserById = async (id) => {
   try {
     const user = await User.findByPk(id);
+    console.log("hell this is runninf " +  user + id);
+    
     return user;
   } catch (error) {
     console.error(error);
